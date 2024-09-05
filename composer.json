@@ -1,0 +1,22 @@
+{
+    "name": "solital/phpunit-bridge",
+    "description": "PHPUnit bridge for Solital Framework",
+    "type": "library",
+    "keywords": [
+        "phpunit",
+        "xunit",
+        "testing"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Solital\\PHPUnit\\": "src/"
+        }
+    },
+    "require": {
+        "solital/vinci-console": "^4.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "spatie/phpunit-snapshot-assertions": "^5.1"
+    }
+}
