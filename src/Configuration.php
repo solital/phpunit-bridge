@@ -30,13 +30,13 @@ class Configuration
 
     public static function fromParameterCollection(ParameterCollection $parameters): self
     {
-        if (!$useProfiling = in_array('--profiling', $_SERVER['argv'], true)) {
+        if (!$useProfiling = in_array('--profiling', (array)$_SERVER['argv'], true)) {
             $useProfiling = $parameters->has('displayProfiling') && !self::isFalsy($parameters->get('displayProfiling'));
         }
-        if (!$useCompactMode = in_array('--compact', $_SERVER['argv'], true)) {
+        if (!$useCompactMode = in_array('--compact', (array)$_SERVER['argv'], true)) {
             $useCompactMode = $parameters->has('useCompactMode') && !self::isFalsy($parameters->get('useCompactMode'));
         }
-        if (!$displayQuote = in_array('--display-quote', $_SERVER['argv'], true)) {
+        if (!$displayQuote = in_array('--display-quote', (array)$_SERVER['argv'], true)) {
             $displayQuote = $parameters->has('displayQuote') && !self::isFalsy($parameters->get('displayQuote'));
         }
 

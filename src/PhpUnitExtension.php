@@ -44,16 +44,16 @@ final class PhpUnitExtension implements Extension
     private function isEnabled(ParameterCollection $parameters): bool
     {
         if (!$parameters->has('enableByDefault') &&
-            !in_array('--enable-pretty-print', $_SERVER['argv'], true) &&
-            !in_array('--disable-pretty-print', $_SERVER['argv'], true)) {
+            !in_array('--enable-pretty-print', (array)$_SERVER['argv'], true) &&
+            !in_array('--disable-pretty-print', (array)$_SERVER['argv'], true)) {
             // Nothing has been set, assume the extension is enabled for backwards compatible reasons.
             return true;
         }
 
-        if (in_array('--enable-pretty-print', $_SERVER['argv'], true)) {
+        if (in_array('--enable-pretty-print', (array)$_SERVER['argv'], true)) {
             return true;
         }
-        if (in_array('--disable-pretty-print', $_SERVER['argv'], true)) {
+        if (in_array('--disable-pretty-print', (array)$_SERVER['argv'], true)) {
             return false;
         }
 

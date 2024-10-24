@@ -11,13 +11,13 @@ use PHPUnit\TestRunner\TestResult\TestResult;
  */
 final class ResultReflection
 {
-    private static int $numberOfTests;
+    //private static int $numberOfTests;
     
     /**
      * The number of processed tests.
      */
     public static function numberOfTests(TestResult $testResult): int
     {
-        return (fn () => self::$numberOfTests)->call($testResult);
+        return (fn () => $this->numberOfTests)->call($testResult);
     }
 }

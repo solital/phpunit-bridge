@@ -13,7 +13,7 @@
         }
     },
     "require": {
-        "solital/vinci-console": "^4.5"
+        "solital/vinci-console": "4.*"
     },
     "require-dev": {
         "phpunit/phpunit": "^11.3",

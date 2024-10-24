@@ -1,6 +1,6 @@
 # PHPUnit bridge for Solital Framework
 
-This package was created using the [robiningelbrecht/phpunit-pretty-print)](https://packagist.org/packages/robiningelbrecht/phpunit-pretty-print) component.
+This package was created using the [robiningelbrecht/phpunit-pretty-print](https://packagist.org/packages/robiningelbrecht/phpunit-pretty-print) component.
 
 ## Installation
 
