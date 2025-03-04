@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Runner\Extension\ParameterCollection;
-use Solital\Core\PHPUnit\Configuration;
+use Solital\PHPUnit\Configuration;
 
 class ConfigurationTest extends TestCase
 {

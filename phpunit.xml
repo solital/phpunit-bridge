@@ -11,7 +11,7 @@
         displayDetailsOnTestsThatTriggerNotices="true"
         displayDetailsOnTestsThatTriggerWarnings="true">
   <testsuites>
-    <testsuite name="Solital Core Tests">
+    <testsuite name="Solital PHPUnit Bridge">
       <directory>tests</directory>
     </testsuite>
   </testsuites>

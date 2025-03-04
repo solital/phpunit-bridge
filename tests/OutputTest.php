@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use Solital\Core\PHPUnit\Quotes;
+use Solital\PHPUnit\Quotes;
 use Spatie\Snapshots\MatchesSnapshots;
 
 class OutputTest extends TestCase

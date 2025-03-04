@@ -12,7 +12,7 @@ use PHPUnit\Framework\IncompleteTestError;
 use PHPUnit\Framework\SkippedWithMessageException;
 use PHPUnit\TestRunner\TestResult\TestResult as PHPUnitTestResult;
 use PHPUnit\TextUI\Configuration\Registry;
-use Solital\Core\Console\Output\ConsoleOutput;
+use Solital\PHPUnit\Output as ConsoleOutput;
 use Solital\PHPUnit\Printer\DefaultPrinter;
 
 /**

@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Runner\Extension\Facade;
 use PHPUnit\Runner\Extension\ParameterCollection;
 use PHPUnit\TextUI\Configuration\Builder;
-use Solital\Core\PHPUnit\PhpUnitExtension;
+use Solital\PHPUnit\PhpUnitExtension;
 
 class PhpUnitExtensionTest extends TestCase
 {

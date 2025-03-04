@@ -4,7 +4,7 @@ namespace Solital\PHPUnit\Subscriber\Application;
 
 use PHPUnit\Event\Application\Started;
 use PHPUnit\Event\Application\StartedSubscriber;
-use Solital\Core\Console\Output\ConsoleOutput;
+use Solital\PHPUnit\Output;
 
 class ApplicationStartedSubscriber implements StartedSubscriber
 {
@@ -12,7 +12,7 @@ class ApplicationStartedSubscriber implements StartedSubscriber
     {
         ob_start();
         $msg = sprintf('%s', $event->runtime()->asString());
-        ConsoleOutput::banner($msg, 49)->print()->break();
+        Output::banner($msg, 49)->print()->break();
         $result = ob_get_contents();
         ob_clean();
 

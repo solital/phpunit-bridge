@@ -2,18 +2,18 @@
 
 namespace Tests\Unit\Subscriber\Application;
 
-use PHPUnit\Event\Application\Started;
-use PHPUnit\Event\Runtime\Runtime;
-use PHPUnit\Event\Telemetry\Duration;
-use PHPUnit\Event\Telemetry\GarbageCollectorStatus;
-use PHPUnit\Event\Telemetry\HRTime;
-use PHPUnit\Event\Telemetry\Info;
-use PHPUnit\Event\Telemetry\MemoryUsage;
-use PHPUnit\Event\Telemetry\Snapshot;
-use PHPUnit\Framework\TestCase;
-use RobinIngelbrecht\PHPUnitPrettyPrint\Subscriber\Application\ApplicationStartedSubscriber;
-use Spatie\Snapshots\MatchesSnapshots;
 use Tests\SpyOutput;
+use PHPUnit\Framework\TestCase;
+use PHPUnit\Event\Telemetry\Info;
+use PHPUnit\Event\Runtime\Runtime;
+use PHPUnit\Event\Telemetry\HRTime;
+use PHPUnit\Event\Telemetry\Duration;
+use PHPUnit\Event\Telemetry\Snapshot;
+use PHPUnit\Event\Application\Started;
+use Spatie\Snapshots\MatchesSnapshots;
+use PHPUnit\Event\Telemetry\MemoryUsage;
+use PHPUnit\Event\Telemetry\GarbageCollectorStatus;
+use Solital\PHPUnit\Subscriber\Application\ApplicationStartedSubscriber;
 
 //use function Termwind\renderUsing;
 
@@ -43,6 +43,9 @@ class ApplicationStartedSubscriberTest extends TestCase
             new Runtime()
         ));
 
-        $this->assertMatchesRegularExpression('/Runtime: PHPUnit [\s\S]+ using PHP [\s\S]+ on [\s\S]+/', $spyOutput);
+        $this->assertMatchesRegularExpression(
+            '/Runtime: PHPUnit [\s\S]+ using PHP [\s\S]+ on [\s\S]+/', 
+            $spyOutput
+        );
     }
 }
